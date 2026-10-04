@@ -3,6 +3,7 @@ name: Deploy GitHub Pages
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -15,15 +16,20 @@ concurrency:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
         with:
           enablement: true
+      - name: Restore original GIF assets
+        run: |
+          cat .gif-source/prio-assets.tar.gz.part-* | base64 --decode > /tmp/prio-assets.tar.gz
+          tar -xzf /tmp/prio-assets.tar.gz -C .
+          rm -rf .gif-source
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .
