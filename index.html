@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#00b5c8" />
+    <meta name="description" content="プリオのニンゲン観察ラボ。質問を通して、みんなの働き方や考え方に出会う会話ゲーム。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="assets/prio/doctor/doctor2_S.png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>プリオのニンゲン観察ラボ</title>
+  </head>
+  <body>
+    <main class="game-shell">
+      <div class="ambient ambient--one" aria-hidden="true">✦</div>
+      <div class="ambient ambient--two" aria-hidden="true">?</div>
+      <div class="ambient ambient--three" aria-hidden="true">✦</div>
+
+      <section id="intro-screen" class="screen screen--intro is-active" aria-labelledby="game-title">
+        <header class="brand-lockup">
+          <h1 id="game-title">プリオの<br />ニンゲン観察ラボ</h1>
+        </header>
+
+        <div class="character-stage character-stage--intro">
+          <span class="orbit orbit--left" aria-hidden="true"></span>
+          <span class="orbit orbit--right" aria-hidden="true"></span>
+          <span class="status-spark spark--one" aria-hidden="true">✦</span>
+          <span class="status-spark spark--two" aria-hidden="true">!</span>
+          <img class="prio-image" src="assets/prio/doctor/doctor2_S.gif" alt="白衣姿のプリオ" />
+        </div>
+
+        <div class="dialogue-card dialogue-card--intro">
+          <p class="speaker-label"><span>●</span> AI観察員 プリオ</p>
+          <p class="dialogue-text">こんにちは、ぼくプリオ！ここは、ぼくのニンゲン観察ラボだよ。AIのぼくには「会社」っていう概念がないんだ。ニンゲンの世界のみんなが、どんな風に働いたりコミュニケーションを取ったりしてるのか、もっと知りたいな！ぼくの質問に答えてみて！</p>
+        </div>
+
+        <button id="start-button" class="game-button game-button--primary" type="button">
+          <span class="button-icon" aria-hidden="true">▶</span> 質問をはじめる！
+        </button>
+      </section>
+
+      <section id="play-screen" class="screen screen--play" aria-live="polite" aria-labelledby="question-title" hidden>
+        <header class="play-header">
+          <button id="home-button" class="home-button" type="button">ラボにもどる</button>
+          <p class="mini-brand">プリオからの質問</p>
+        </header>
+
+        <div class="category-wrap">
+          <span id="category-badge" class="category-badge">日常</span>
+        </div>
+
+        <div class="character-stage character-stage--play">
+          <span class="scan-ring scan-ring--one" aria-hidden="true"></span>
+          <span class="scan-ring scan-ring--two" aria-hidden="true"></span>
+          <span class="status-spark spark--three" aria-hidden="true">✦</span>
+          <img id="question-image" class="prio-image" src="assets/prio/smile/smile_S.gif" alt="質問をするプリオ" />
+        </div>
+
+        <div id="question-card" class="dialogue-card dialogue-card--question">
+          <p class="speaker-label"><span>✦</span> ニンゲンに質問！</p>
+          <h2 id="question-title">好きなおにぎりの具は何？理由も教えて！</h2>
+        </div>
+
+        <div class="action-area">
+          <button id="next-button" class="game-button game-button--primary" type="button">次の質問へ <span class="button-icon" aria-hidden="true">▶</span></button>
+        </div>
+      </section>
+
+      <footer class="site-footer"><a href="https://www.libinc.co.jp/service/#libz" target="_blank" rel="noopener noreferrer">運営元：リブズ転職準備について <span aria-hidden="true">↗</span></a></footer>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
