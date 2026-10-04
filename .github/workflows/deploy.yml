@@ -27,9 +27,9 @@ jobs:
           enablement: true
       - name: Restore original GIF assets
         run: |
-          cat .gif-source/prio-assets.tar.gz.part-* | base64 --decode > /tmp/prio-assets.tar.gz
+          cat .gif-source-v4/prio-assets.tar.gz.part-* | base64 --decode > /tmp/prio-assets.tar.gz
           tar -xzf /tmp/prio-assets.tar.gz -C .
-          rm -rf .gif-source
+          rm -rf .gif-source .gif-source-v2 .gif-source-v3 .gif-source-v4
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .

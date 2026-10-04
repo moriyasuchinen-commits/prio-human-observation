@@ -31,10 +31,21 @@ const questionData = {
   ]
 };
 
+const questionImages = [
+  "amazing/amazing_S.gif",
+  "angry/angry_S.gif",
+  "burning/burning2_S.gif",
+  "doctor/doctor2_S.gif",
+  "drinking/drinking_S.gif",
+  "fight/fight_S.gif",
+  "happy/happy_S.gif",
+  "lonely/lonely_S.gif"
+];
+
 const categories = [
-  { key: "icebreak", label: "日常", images: ["smile/smile_S.gif", "happy/happy_S.gif", "relax/relax_S.gif", "amazing/amazing_S.gif", "great/great_S.gif", "oh/oh_S.gif", "surprise/surprise_S.gif"] },
-  { key: "workStyle", label: "お仕事", images: ["thinking/thinking_1_S.gif", "thinking/thinking_2_S.gif", "focus/focus_S.gif", "study/study_S.gif", "doctor/doctor2_S.gif", "nurse/nurse2_S.gif", "pointing-left/pointing-left_S.gif", "pointing-right/pointing-right_S.gif", "base/base_kyorokyoro_S.gif"] },
-  { key: "honest", label: "ぶっちゃけ！", images: ["drinking/drinking_S.gif", "what/what_S.gif", "antsy/antsy_S.gif", "lonely/lonely_S.gif", "angry/angry_S.gif", "sad/sad_S.gif", "please/please_S.gif", "peeking-left/peeking-left_S.png", "peeking-right/peeking-right_S.png", "fight/fight_S.gif", "burning/burning2_S.gif"] }
+  { key: "icebreak", label: "日常", images: questionImages },
+  { key: "workStyle", label: "お仕事", images: questionImages },
+  { key: "honest", label: "ぶっちゃけ！", images: questionImages }
 ];
 
 const usedQuestions = Object.fromEntries(categories.map(({ key }) => [key, []]));
