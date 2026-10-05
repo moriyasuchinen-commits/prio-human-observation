@@ -18,7 +18,7 @@ h1 { margin:.35rem 0 0; color:var(--deep); font-size:clamp(1.8rem,7.5vw,2.35rem)
 .character-stage { position:relative; display:grid; place-items:center; margin:auto; }
 .character-stage--intro { width:min(78vw,306px); height:min(78vw,306px); margin-top:9px; }
 .character-stage--intro .prio-image { width:84%; height:84%; }
-.character-stage--play { width:235px; height:220px; margin:4px auto 28px; overflow:hidden; }
+.character-stage--play { width:235px; height:220px; margin:4px auto 42px; overflow:visible; }
 .prio-image { position:relative; z-index:2; width:100%; height:100%; object-fit:contain; filter:drop-shadow(0 9px 3px rgba(10,104,119,.16)); }
 .character-stage--play .prio-image { max-width:100%; max-height:100%; }
 .character-stage--play .prio-image.is-peeking { width:72%; height:78%; transform:translateY(-4px); }
@@ -64,5 +64,5 @@ h1 { margin:.35rem 0 0; color:var(--deep); font-size:clamp(1.8rem,7.5vw,2.35rem)
 @keyframes pop-in { from { opacity:0; transform:translateY(8px) scale(.96); } to { opacity:1; transform:translateY(0) scale(1); } }
 @keyframes float { to { transform:translateY(-7px) rotate(8deg); } }
 @media (min-width:600px) { .game-shell { min-height:760px; padding-top:28px; } }
-@media (max-height:700px) { .screen--intro { padding-top:0; } .character-stage--intro { width:210px; height:210px; margin-top:0; } .dialogue-card--intro { padding:16px; } .dialogue-text { font-size:.88rem; line-height:1.58; } .game-button--primary { min-height:52px; margin-top:17px; } .site-footer { padding-top:11px; } .character-stage--play { height:184px; margin-bottom:22px; } .dialogue-card--question { min-height:118px; padding:16px; } .action-area { margin-top:16px; } .action-area .game-button { margin-top:14px; } }
+@media (max-height:700px) { .screen--intro { padding-top:0; } .character-stage--intro { width:210px; height:210px; margin-top:0; } .dialogue-card--intro { padding:16px; } .dialogue-text { font-size:.88rem; line-height:1.58; } .game-button--primary { min-height:52px; margin-top:17px; } .site-footer { padding-top:11px; } .character-stage--play { height:184px; margin-bottom:32px; overflow:visible; } .dialogue-card--question { min-height:118px; padding:16px; } .action-area { margin-top:16px; } .action-area .game-button { margin-top:14px; } }
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; } }
