@@ -1,12 +1,18 @@
 :root { --cyan:#00b5c8; --deep:#075c59; --navy:#13394a; --yellow:#ffcb3f; --orange:#ff9f43; --cream:#fffdf3; --ink:#164252; --shadow:0 8px 0 #0d858f, 0 13px 0 rgba(20,78,94,.14); }
 * { box-sizing:border-box; }
 html { min-height:100%; background:#ddf7fa; }
-body { min-width:320px; min-height:100vh; margin:0; color:var(--ink); font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif; background:radial-gradient(circle at 18% 10%,#fff 0 2px,transparent 2.5px),radial-gradient(circle at 84% 24%,#fff 0 3px,transparent 3.5px),linear-gradient(155deg,#d9f8fc 0%,#fdfbe9 47%,#e7f9fa 100%); background-size:38px 38px,61px 61px,auto; }
+body { min-width:320px; min-height:100vh; margin:0; color:var(--ink); font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif; background:linear-gradient(155deg,#dff8fa 0%,#fffced 51%,#e9f9f7 100%); }
 button,a { font:inherit; }
 button { cursor:pointer; }
 .game-shell { position:relative; isolation:isolate; display:flex; flex-direction:column; min-height:100svh; max-width:550px; margin:auto; padding:20px 20px 14px; overflow:hidden; }
 .game-shell::before { content:""; position:absolute; z-index:-1; top:-104px; left:-96px; width:245px; height:245px; border:18px solid rgba(0,181,200,.13); border-radius:50%; }
-.game-shell::after { content:""; position:absolute; z-index:-1; right:-109px; bottom:76px; width:220px; height:220px; border:18px dotted rgba(255,174,54,.28); border-radius:50%; }
+.game-shell::after { content:""; position:absolute; z-index:-1; right:-109px; bottom:76px; width:220px; height:220px; border:2px dashed rgba(255,174,54,.28); border-radius:50%; }
+.lab-grid { position:absolute; z-index:-2; inset:0; pointer-events:none; opacity:.48; background-image:linear-gradient(rgba(0,181,200,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(0,181,200,.10) 1px,transparent 1px); background-size:28px 28px; mask-image:linear-gradient(to bottom,transparent 0,black 14%,black 86%,transparent 100%); }
+.lab-motif { position:absolute; z-index:-1; width:72px; height:72px; overflow:visible; fill:none; stroke:rgba(7,92,89,.18); stroke-linecap:round; stroke-linejoin:round; stroke-width:3; pointer-events:none; }
+.lab-motif--flask { top:98px; right:-12px; width:73px; height:73px; stroke:rgba(0,181,200,.23); }
+.lab-motif--report { top:42%; left:-19px; width:72px; height:72px; stroke:rgba(7,92,89,.15); transform:rotate(-10deg); }
+.lab-motif--chart { bottom:114px; right:-13px; width:92px; height:62px; stroke:rgba(255,159,67,.23); }
+.lab-motif--molecule { bottom:16px; left:-18px; width:84px; height:70px; stroke:rgba(0,181,200,.20); transform:rotate(-12deg); }
 .screen { width:100%; margin:auto; opacity:0; transform:translateY(8px); transition:opacity .24s ease,transform .24s ease; }
 .screen[hidden] { display:none; }
 .screen.is-active { opacity:1; transform:translateY(0); }
