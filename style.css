@@ -9,7 +9,11 @@ button { cursor:pointer; }
 .game-shell::after { content:""; position:absolute; z-index:-1; right:-109px; bottom:76px; width:220px; height:220px; border:2px dashed rgba(255,174,54,.28); border-radius:50%; }
 .lab-grid { position:absolute; z-index:0; inset:0; pointer-events:none; opacity:.56; background-image:linear-gradient(rgba(0,181,200,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(0,181,200,.12) 1px,transparent 1px); background-size:28px 28px; mask-image:linear-gradient(to bottom,transparent 0,black 14%,black 86%,transparent 100%); }
 .lab-motif { position:absolute; z-index:0; width:72px; height:72px; overflow:visible; fill:none; stroke:rgba(7,92,89,.22); stroke-linecap:round; stroke-linejoin:round; stroke-width:3; pointer-events:none; }
-.lab-motif--flask { top:98px; right:-12px; width:73px; height:73px; stroke:rgba(0,181,200,.23); }
+.lab-motif--flask { top:90px; right:-9px; width:80px; height:80px; stroke:rgba(0,181,200,.29); }
+.flask-outline { fill:rgba(255,255,255,.22); }
+.flask-liquid { fill:rgba(0,181,200,.14); stroke:none; }
+.flask-wave { fill:none; stroke:rgba(0,181,200,.38); }
+.flask-bubble { fill:rgba(0,181,200,.22); stroke:none; }
 .lab-motif--report { top:42%; left:-19px; width:72px; height:72px; stroke:rgba(7,92,89,.15); transform:rotate(-10deg); }
 .lab-motif--chart { bottom:114px; right:-13px; width:92px; height:62px; stroke:rgba(255,159,67,.23); }
 .lab-motif--molecule { bottom:16px; left:-18px; width:84px; height:70px; stroke:rgba(0,181,200,.20); transform:rotate(-12deg); }
